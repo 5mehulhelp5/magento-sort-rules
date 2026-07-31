@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="stacknuts_sortrules" translate="label" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Sort Rules</label>
+            <tab>catalog</tab>
+            <resource>StackNuts_SortRules::config</resource>
+            <group id="general_settings" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <comment>Turns Sort Rules off entirely without losing any configured rules. Off, the storefront "Sort By" dropdown and URL parameter behave exactly as if this module weren't installed.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Sort Options</label>
+                <field id="rules" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Rules</label>
+                    <frontend_model>StackNuts\SortRules\Block\Adminhtml\Form\Field\RuleGrid</frontend_model>
+                    <backend_model>StackNuts\SortRules\Model\Config\Backend\RuleSerializer</backend_model>
+                    <comment><![CDATA[
+                        <p>Each row adds one option to the storefront "Sort By" dropdown.</p>
+                        <ul style="padding-left: 20px;">
+                            <li><strong>Display Order</strong>: the order options appear in relative to each other in the storefront "Sort By" dropdown. Renumbered automatically on save, so rows can be reordered just by editing this value.</li>
+                            <li><strong>Sort Url Param</strong>: the identifier used in the <code>product_list_order</code> URL parameter.</li>
+                            <li><strong>Attribute</strong>: only attributes flagged "Used for Sorting in Product Listing" are offered here.</li>
+                            <li><strong>Default Direction</strong>: direction applied when the option is first selected.</li>
+                            <li><strong>Force Direction</strong>: ignores any direction requested in the URL and always applies the configured one.</li>
+                        </ul>
+                        <style type="text/css">
+                            #stacknuts_sortrules_general > table,
+                            #stacknuts_sortrules_general > table > tbody,
+                            #stacknuts_sortrules_general > table > tbody > tr,
+                            #stacknuts_sortrules_general > table > tbody > tr > td {
+                                display: block;
+                                width: 100%;
+                            }
+                            #row_stacknuts_sortrules_general_rules > td {
+                                padding-left: 0;
+                                padding-right: 0;
+                                text-align: left;
+                            }
+                            #row_stacknuts_sortrules_general_rules > td.label span[data-config-scope]:before {
+                                right: auto;
+                                left: 0;
+                            }
+                            #row_stacknuts_sortrules_general_rules > td.value input[type='text'] {
+                                min-width: 160px;
+                            }
+                        </style>
+                    ]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
