@@ -1,5 +1,7 @@
 # StackNuts Sort Rules
 
+[![Latest Version](https://img.shields.io/packagist/v/stacknuts/magento-sort-rules.svg)](https://packagist.org/packages/stacknuts/magento-sort-rules) [![License](https://img.shields.io/packagist/l/stacknuts/magento-sort-rules.svg)](https://github.com/StackNuts/magento-sort-rules/blob/main/LICENSE) [![PHP Version](https://img.shields.io/packagist/php-v/stacknuts/magento-sort-rules.svg)](https://packagist.org/packages/stacknuts/magento-sort-rules)
+
 Enhance the storefront "Sort By" selector on the catalog listing toolbar. This module lets you define a custom display for your sortable attributes entirely from Stores > Configuration > Catalog > Sort Rules, no template override or custom plugin required.
 
 ![Storefront "Sort By" dropdown showing custom options](.github/screenshots/frontend-selector.png)
