@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./.github/banner.png" alt="StackNuts Sort Rules" width="100%">
+</p>
+
 # StackNuts Sort Rules
 
 [![Latest Version](https://img.shields.io/packagist/v/stacknuts/magento-sort-rules.svg)](https://packagist.org/packages/stacknuts/magento-sort-rules) [![License](https://img.shields.io/packagist/l/stacknuts/magento-sort-rules.svg)](https://github.com/StackNuts/magento-sort-rules/blob/main/LICENSE) [![PHP Version](https://img.shields.io/packagist/php-v/stacknuts/magento-sort-rules.svg)](https://packagist.org/packages/stacknuts/magento-sort-rules)
